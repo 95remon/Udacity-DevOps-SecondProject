@@ -36,10 +36,10 @@ Resources:
         FromPort: 80
         ToPort: 80
         CidrIp: 0.0.0.0/0
-      - IpProtocol: tcp
-        FromPort: 22
-        ToPort: 22
-        CidrIp: 0.0.0.0/0
+      # - IpProtocol: tcp
+      #   FromPort: 22
+      #   ToPort: 22
+      #   CidrIp: 0.0.0.0/0
       SecurityGroupEgress:
       - IpProtocol: tcp
         FromPort: 0
@@ -57,7 +57,7 @@ Resources:
           cd /var/www/html
           echo "<h1>it works! Udagram, Udacity, Remon Louis</h1>" > index.html          
       ImageId: ami-0729e439b6769d6ab
-      KeyName: udacity
+      # KeyName: udacity
       SecurityGroups:
       - Ref: WebServerSecGroup
       InstanceType: t3.medium
